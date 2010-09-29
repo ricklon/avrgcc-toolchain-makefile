@@ -1,0 +1,51 @@
+# 
+# This is a makefile that allows you to configure the versions of the source code and install directories for avr-gcc#
+#Assumptions: curl is installed
+#You are familiar sudo, because the install targets use sudo for installing to the system
+#You will put the executables in the PATH appropriately
+
+Makefile.master are the global settings and compilation.
+Makefile.gccver are the local and overide settings and patches
+
+The "all" target and builds the complete package and install everything in a default ./out/bin
+
+In order to try this out you need to do the following:
+git clone git@github.com:ricklon/avrgcc-macosx-makefile.git
+cd avrgcc-macosx-makefile
+make -f Makefile.435
+
+About 20 minutes later you should have a working locally compiled binary version of avr gcc.
+
+
+For quick reference all open avr gcc bugs can be found using this url:
+#gcc avr bugs all open and closed since 4.3.5 http://tinyurl.com/23wjmhv good source of patches
+avr libc open bugs: http://savannah.nongnu.org/bugs/?group=avr-libc
+
+MORE DEATILS:
+
+The Makefile has the following targets, and it's recommended to run them in this order:
+
+setup:
+getsources: setup
+unpacksources:
+build-gmp:
+install-gmp:
+build-mpfr:
+install-mpfr:
+build-mpc:	
+install-mpc:
+build-binutils:
+install-binutils:
+build-linkprereqs:
+build-avrgccgxx:
+install-avrgccgxx:
+build-avrlibc:
+install-avrlibc:
+build-avrdude:
+install-avrdude:
+build-avrgdb:
+install-avrgdb:
+
+The code should be working as expected at this point for compiling. Feel free to create tests to verify
+that it is correctly working.
+
