@@ -54,13 +54,13 @@ getsources.t: setup.t
 	curl -O ftp://ftp.gmplib.org/pub/gmp-$(GMP_VER)/gmp-$(GMP_VER).tar.bz2 ;\
 	curl -O http://www.mpfr.org/mpfr-$(MPFR_VER)/mpfr-$(MPFR_VER).tar.gz ;\
 	curl -O http://www.multiprecision.org/mpc/download/mpc-$(MPC_VER).tar.gz ; \
-	curl -O ftp://ftp.gnu.org/gnu/binutils/binutils-$(BINUTILS_VER).tar.gz ; \
+	curl -LO ftp://ftp.gnu.org/gnu/binutils/binutils-$(BINUTILS_VER).tar.gz ; \
 	curl -O http://ftp.gnu.org/gnu/libtool/libtool-$(LIBTOOL_VER).tar.gz ; \
 	curl -O ftp://ftp.gnu.org/gnu/gcc/gcc-$(AVRGCC_VER)/gcc-g++-$(AVRGCC_VER).tar.gz ; \
 	curl -O ftp://ftp.gnu.org/gnu/gcc/gcc-$(AVRGCC_VER)/gcc-core-$(AVRGCC_VER).tar.gz ; \
 	curl -O http://nongnu.askapache.com/avr-libc/avr-libc-$(AVRLIBC_VER).tar.bz2 ; \
 	curl -O http://ftp.gnu.org/gnu/gdb/gdb-$(GDB_VER).tar.gz ; \
-	curl -O http://mirror.its.uidaho.edu/pub/savannah/avrdude/avrdude-$(AVRDUDE_VER).tar.gz ;\
++       curl -LO http://download.savannah.gnu.org/releases/avrdude/avrdude-$(AVRDUDE_VER).tar.gz ;\
 	curl -L  http://sourceforge.net/projects/libusb/files/libusb-0.1%20%28LEGACY%29/$(LIBUSB_VER)/libusb-$(LIBUSB_VER).tar.gz/download -o libusb-$(LIBUSB_VER).tar.gz ;\
 	curl -O http://garr.dl.sourceforge.net/project/avarice/avarice/avarice-$(AVARICE_VER)/avarice-$(AVARICE_VER).tar.bz2 ;\
 	curl -L -O http://download.savannah.gnu.org/releases/simulavr/simulavr-$(SIMULAVR_VER).tar.gz ;)
